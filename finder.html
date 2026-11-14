@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameGear | Gear Finder</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GameGear</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="gear.html">Gear</a> |
+            <a href="compare.html">Compare</a> |
+            <a href="finder.html">Gear Finder</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Gear Finder</h2>
+
+        <form id="gearForm">
+            <label for="gameType">What type of game do you play most?</label>
+            <select id="gameType">
+                <option value="">Choose a game type</option>
+                <option value="shooter">Shooter</option>
+                <option value="racing">Racing</option>
+            </select>
+
+            <button type="submit">Find my gear</button>
+        </form>
+
+        <p id="result" aria-live="polite"></p>
+
+        <h2>Buying Tip</h2>
+        <button type="button" id="tipButton">Show tip</button>
+        <p id="buyingTip" hidden>Measure your desk before choosing a mouse pad.</p>
+
+        <h2>Gear Cost Calculator</h2>
+        <form id="costForm">
+            <p>
+                <label for="price">Price per item (SAR)</label>
+                <input id="price" type="number" min="0" step="0.01" required>
+            </p>
+            <p>
+                <label for="quantity">Quantity</label>
+                <input id="quantity" type="number" min="1" step="1" value="1" required>
+            </p>
+            <button type="submit">Calculate total</button>
+        </form>
+        <p id="total" aria-live="polite"></p>
+
+        <h2>Page Appearance</h2>
+        <button type="button" id="themeButton">Turn dark mode on</button>
+    </main>
+
+    <footer>
+        <p>GameGear | CIS201 Project</p>
+    </footer>
+</body>
+</html>
